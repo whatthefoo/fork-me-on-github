@@ -1,6 +1,6 @@
 {
   "name": "fork-me-on-github",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "A fresher 'Fork me on GitHub' callout, now on React",
   "keywords": [
@@ -12,7 +12,7 @@
     "github corner fork",
     "github fork"
   ],
-  "homepage": "https://dreamyguy.github.io/fork-me-on-github",
+  "homepage": "https://whatthefoo.github.io/fork-me-on-github",
   "repository": {
     "type": "git",
     "url": "https://github.com/whatthefoo/fork-me-on-github"

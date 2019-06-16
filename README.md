@@ -18,7 +18,7 @@ Use **fork-me-on-github** to promote your project on GitHub:
 
 Instead of maintaining a list of possible combinations on this README, I created a living GitHub page, tha serves both as a way of showcase the variations and facilitate their use.
 
-https://dreamyguy.github.io/fork-me-on-github/
+https://whatthefoo.github.io/fork-me-on-github/
 
 **On this page you can:**
 
