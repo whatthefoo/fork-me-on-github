@@ -1,0 +1,84 @@
+{
+  "name": "fork-me-on-github",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A fresher 'Fork me on GitHub' callout, now on React",
+  "keywords": [
+    "fork me on github",
+    "github corner",
+    "github corner callout",
+    "github corner badge",
+    "github corner ribbon",
+    "github corner fork",
+    "github fork"
+  ],
+  "homepage": "https://dreamyguy.github.io/fork-me-on-github",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whatthefoo/fork-me-on-github"
+  },
+  "main": "lib/index",
+  "typings": "dist/index",
+  "author": {
+    "name": "Wallace Sidhrée",
+    "email": "i@dreamyguy.com",
+    "url": "http://sidhree.com/"
+  },
+  "contributors": [
+    {
+      "name": "Tim Holman",
+      "email": "timothy.w.holman@gmail.com",
+      "url": "http://tholman.com"
+    }
+  ],
+  "copyright": "Copyright (c) Wallace Sidhrée - All rights reserved.",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.12.0",
+    "react-emojis": "^1.0.6",
+    "react-scripts": "3.0.1",
+    "react-syntax-highlighter": "^10.3.0",
+    "validate-color": "^1.0.0",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "prebuild": "echo 🚀  Runnin 'build', hang tight!",
+    "build": "react-scripts build",
+    "postbuild": "echo 🎉 'build' was completed",
+    "prebuild-npm": "echo 🏎  Runnin 'build', hang tight!",
+    "build-npm": "NODE_ENV=npm webpack --config webpack.config.npm.js",
+    "postbuild-npm": "echo 🎈 'build-npm' was completed",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "deploy-npm": "npm publish",
+    "release": "npm run deploy && npm run deploy-npm"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

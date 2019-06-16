@@ -1,0 +1,42 @@
+.copy-to-clipboard {
+  position: relative;
+  // Reset button styles
+  background-color: white;
+  border-radius: 0;
+  border: none;
+  border-image-width: 0;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  // Carry on
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin: 15px auto;
+  &:hover {
+    background-color: lightgray;
+    cursor: pointer;
+  }
+  &.disabled {
+    background-color: green;
+    cursor: initial;
+  }
+  &__content {
+    font-size: 16px;
+    @media (min-width: 980px) {
+      font-size: 18px;
+    }
+    font-weight: 500;
+    color: black;
+    text-shadow: 2px 2px 1px white;
+    .disabled & {
+      color: white;
+      text-shadow: 2px 2px 1px black;
+    }
+    .react-emojis {
+      text-shadow: none !important;
+    }
+  }
+}
