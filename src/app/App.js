@@ -169,7 +169,7 @@ class App extends Component {
               <div className="header__content">
                 <h1><Emoji emoji="octopus"/>&nbsp;Fork me on GitHub&nbsp;<Emoji emoji="octopus"/></h1>
                 <h2>A fresher 'Fork me on GitHub' callout, now on React</h2>
-                <p>Documentation on <em>props</em> can be found at the <a className="link" href="https://github.com/whatthefoo/fork-me-on-github">GitHub repository</a> or at <a className="link" href="https://www.npmjs.com/package/">npm</a>.</p>
+                <p>Documentation on <em>props</em> can be found at the <a className="link" href="https://github.com/whatthefoo/fork-me-on-github">GitHub repository</a> or at <a className="link" href="https://www.npmjs.com/fork-me-on-github/">npm</a>.</p>
                 {this.renderDocumentation()}
               </div>
             </div>
