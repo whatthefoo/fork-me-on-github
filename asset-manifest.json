@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fork-me-on-github/static/css/main.a59e8e86.chunk.css",
-    "main.js": "/fork-me-on-github/static/js/main.6cd1c01a.chunk.js",
-    "main.js.map": "/fork-me-on-github/static/js/main.6cd1c01a.chunk.js.map",
+    "main.css": "/fork-me-on-github/static/css/main.3793c976.chunk.css",
+    "main.js": "/fork-me-on-github/static/js/main.7a46123a.chunk.js",
+    "main.js.map": "/fork-me-on-github/static/js/main.7a46123a.chunk.js.map",
     "runtime~main.js": "/fork-me-on-github/static/js/runtime~main.61583c1b.js",
     "runtime~main.js.map": "/fork-me-on-github/static/js/runtime~main.61583c1b.js.map",
-    "static/js/2.90969db1.chunk.js": "/fork-me-on-github/static/js/2.90969db1.chunk.js",
-    "static/js/2.90969db1.chunk.js.map": "/fork-me-on-github/static/js/2.90969db1.chunk.js.map",
+    "static/js/2.444ab56b.chunk.js": "/fork-me-on-github/static/js/2.444ab56b.chunk.js",
+    "static/js/2.444ab56b.chunk.js.map": "/fork-me-on-github/static/js/2.444ab56b.chunk.js.map",
     "index.html": "/fork-me-on-github/index.html",
-    "precache-manifest.ce9cac21b433c1d648980b48f72c270b.js": "/fork-me-on-github/precache-manifest.ce9cac21b433c1d648980b48f72c270b.js",
+    "precache-manifest.074502bd5fbcf6ad95b4f4dc31ae59e3.js": "/fork-me-on-github/precache-manifest.074502bd5fbcf6ad95b4f4dc31ae59e3.js",
     "service-worker.js": "/fork-me-on-github/service-worker.js",
-    "static/css/main.a59e8e86.chunk.css.map": "/fork-me-on-github/static/css/main.a59e8e86.chunk.css.map"
+    "static/css/main.3793c976.chunk.css.map": "/fork-me-on-github/static/css/main.3793c976.chunk.css.map"
   }
 }
