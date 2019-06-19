@@ -5,13 +5,40 @@ import PropTypes from 'prop-types';
 import validateColor from 'validate-color';
 
 // Import styles
-import './ForkMeOnGithub.scss'
+import './ForkMeOnGithub.scss';
 
-const svg = ({colorBackground, colorOctocat, side}) => {
-  const theColorBackground = colorBackground && validateColor(colorBackground) ? colorBackground : 'black';
+const svg = ({isPride, colorBackground, colorOctocat, side}) => {
+  const prideGradient = () => (
+    <svg style={{ width: '0', height: '0', position: 'absolute' }} aria-hidden="true" focusable="false">
+      <linearGradient id="prideGradient" x2="1" y2="1">
+        <stop offset="0%" stopColor="#f00000" />
+        <stop offset="16.67%" stopColor="#f00000" />
+        <stop offset="16.67%" stopColor="#ff8000" />
+        <stop offset="33.33%" stopColor="#ff8000" />
+        <stop offset="33.33%" stopColor="#ffff00" />
+        <stop offset="50%" stopColor="#ffff00" />
+        <stop offset="50%" stopColor="#007940" />
+        <stop offset="66.67%" stopColor="#007940" />
+        <stop offset="66.67%" stopColor="#4040ff" />
+        <stop offset="83.33%" stopColor="#4040ff" />
+        <stop offset="83.33%" stopColor="#a000c0" />
+        <stop offset="100%" stopColor="#a000c0" />
+      </linearGradient>
+    </svg>
+  );
+  const theColorBackground = () => {
+    if (isPride) {
+      return 'url(#prideGradient) #f00000';
+    } else if (colorBackground && validateColor(colorBackground)) {
+      return colorBackground;
+    }
+    return 'black';
+  }
   const theColorOctocat = colorOctocat && validateColor(colorOctocat) ? colorOctocat : 'white';
   const theSide = (side === 'left') ? { transform: 'scale(-1, 1)' } : {};
   return (
+    <>
+    {isPride && prideGradient()}
     <svg
       width="80"
       height="80"
@@ -19,7 +46,7 @@ const svg = ({colorBackground, colorOctocat, side}) => {
       style={{
         border: '0',
         color: theColorOctocat,
-        fill: theColorBackground,
+        fill: theColorBackground(),
         ...theSide
       }}
       aria-hidden="true"
@@ -41,6 +68,7 @@ const svg = ({colorBackground, colorOctocat, side}) => {
         className="octo-body"
       />
     </svg>
+    </>
   )
 };
 
@@ -52,6 +80,7 @@ const ForkMeOnGithub = props => {
     side = 'right',
     text = 'Fork me on GitHub',
     isDocumentation = false,
+    isPride = false,
   } = props;
   const theSide = (side === 'left') ? { left: '0' } : { right: '0' };
   const theStyles = isDocumentation ? { position: 'relative' } : { position: 'absolute', top: '0', ...theSide };
@@ -62,7 +91,7 @@ const ForkMeOnGithub = props => {
       aria-label={text}
       style={{ ...theStyles }}
     >
-      {svg({colorBackground, colorOctocat, side})}
+      {svg({isPride, colorBackground, colorOctocat, side})}
     </a>
   )
 }
@@ -71,6 +100,7 @@ ForkMeOnGithub.propTypes = {
   colorBackground: PropTypes.string,
   colorOctocat: PropTypes.string,
   isDocumentation: PropTypes.bool,
+  isPride: PropTypes.bool,
   repo: PropTypes.string.isRequired,
   side: PropTypes.oneOf(['left', 'right']),
   text: PropTypes.string,

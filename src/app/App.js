@@ -162,18 +162,18 @@ const App = () => {
   const [colorBackgroundState, setColorBackgroundState] = useState('');
   const [colorOctocatState, setColorOctocatState] = useState('');
   const [repoState, setRepoState] = useState('');
+  const [prideState, setPrideState] = useState(false);
   const colorBackgroundIsValid = colorBackgroundState && validateColor(colorBackgroundState);
   const colorOctocatIsValid = colorOctocatState && validateColor(colorOctocatState);
   const repoIsValid = url => /https:\/\/github.com\/([a-z0-9/\-%@?&])+/.test(url);
   const theString = () => (`<ForkMeOnGithub
-  repo="${repoIsValid(repoState) ? repoState : 'https://github.com/whatthefoo/fork-me-on-github'}"
-  colorBackground="${colorBackgroundIsValid ? colorBackgroundState : 'black'}"
-  colorOctocat="${colorOctocatIsValid ? colorOctocatState : 'white'}"
+  repo="${repoIsValid(repoState) ? repoState : 'https://github.com/whatthefoo/fork-me-on-github'}"${!prideState ? `\n  colorBackground="${colorBackgroundIsValid ? colorBackgroundState : 'black'}"` : ''}
+  colorOctocat="${colorOctocatIsValid ? colorOctocatState : 'white'}"${prideState ? '\n  isPride' : ''}
 />`);
   return (
     <>
       <div className="app">
-        <ForkMeOnGithub repo="https://github.com/whatthefoo/fork-me-on-github"/>
+        <ForkMeOnGithub repo="https://github.com/whatthefoo/fork-me-on-github" isPride/>
         <div className="fork-me-on-github-docs">
           <div className="header">
             <div className="logo-top">
@@ -249,7 +249,28 @@ const App = () => {
                   colorBackground={colorBackgroundState}
                   colorOctocat={colorOctocatState}
                   isDocumentation
+                  isPride={prideState}
                 />
+                <div className="user-input__checkbox">
+                  <label htmlFor="prideState" className="user-input__checkbox__label">
+                    <input
+                      type="checkbox"
+                      id="prideState"
+                      onChange={() => {
+                        setPrideState(!prideState);
+                      }}
+                      checked={prideState}
+                    />&nbsp;
+                    <span style={{color: '#f00000'}}>I</span>
+                    <span style={{color: '#ff8000'}}>s</span>&nbsp;
+                    <span style={{color: '#fff700'}}>p</span>
+                    <span style={{color: '#007940'}}>r</span>
+                    <span style={{color: '#4040ff'}}>o</span>
+                    <span style={{color: '#a000c0'}}>u</span>
+                    <span style={{color: '#f00000'}}>d</span>
+                    <span style={{color: '#ff8000'}}>!</span>
+                  </label>
+                </div>
                 <ButtonCopyToClipboard
                   text={theString()}
                 />

@@ -43,6 +43,16 @@ $mobile-breakpoint: 680px;
       }
     }
   }
+  &__checkbox {
+    max-width: 150px;
+    padding: 5px 10px;
+    margin: 10px auto 0;
+    background-color: lightgray;
+    input {
+      position: relative;
+      top: -1px;
+    }
+  }
 }
 
 .build-me-one-of-those {
